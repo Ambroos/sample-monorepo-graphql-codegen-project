@@ -4,6 +4,24 @@
   "sourceRoot": "apps/countries-app/src",
   "projectType": "application",
   "targets": {
+    "graphql-codegen": {
+      "executor": "nx:run-commands",
+      "outputs": ["{projectRoot}/src/gql"],
+      "inputs": [
+        "production",
+        "{projectRoot}/codegen.ts",
+        "{workspaceRoot}/libs/graphql-schema/*.graphql"
+      ],
+      "dependsOn": [
+        {
+          "projects": ["graphql-schema"],
+          "target": "graphql-codegen"
+        }
+      ],
+      "options": {
+        "command": "npx graphql-codegen --config {projectRoot}/codegen.ts"
+      }
+    },
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],

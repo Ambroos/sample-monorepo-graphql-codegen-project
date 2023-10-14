@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@sample-monorepo-graphql-codegen-project/get-graphql-schema-nx-plugin": [
+        "libs/get-graphql-schema-nx-plugin/src/index.ts"
+      ],
+      "@sample-monorepo-graphql-codegen-project/graphql-schema": [
+        "libs/graphql-schema/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

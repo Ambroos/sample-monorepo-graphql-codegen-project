@@ -1,3 +1,11 @@
 # Add files here to ignore them from prettier formatting
 /dist
 /coverage
+
+libs/graphql-schema/*.graphql linguist-generated=true
+
+# GraphQL codegen files, by convention
+**/src/gql/fragment-masking.ts
+**/src/gql/gql.ts
+**/src/gql/graphql.ts
+**/src/gql/index.ts

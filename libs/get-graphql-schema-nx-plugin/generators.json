@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "get-graphql-schema": {
+      "factory": "./src/generators/get-graphql-schema/generator",
+      "schema": "./src/generators/get-graphql-schema/schema.json",
+      "description": "get-graphql-schema generator"
+    }
+  }
+}
